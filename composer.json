@@ -1,0 +1,17 @@
+{
+    "name": "cristhian/sprint1_7",
+    "autoload": {
+        "psr-4": {
+            "Cristhian\\Sprint17\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cristhian-Valenci",
+            "email": "cristhianvalenci22@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
