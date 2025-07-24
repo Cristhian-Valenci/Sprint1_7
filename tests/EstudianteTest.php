@@ -6,7 +6,12 @@ use PHPUnit\Framework\TestCase;
 
 class EstudianteTest extends TestCase {
 
-    public function test_ComprobarPrimeraDivisionBien() {
+    public function test_ComprobarPrimeraDivisionBienMayor() {
+        $Estudiante = new Estudiante();
+
+        $this->assertEquals("Primera Division", $Estudiante->calcularGradoDelEstudiante(61));
+    }
+     public function test_ComprobarPrimeraDivisionBienIgual() {
         $Estudiante = new Estudiante();
 
         $this->assertEquals("Primera Division", $Estudiante->calcularGradoDelEstudiante(60));
@@ -18,10 +23,15 @@ class EstudianteTest extends TestCase {
         $this->assertNotEquals("Primera Division", $Estudiante->calcularGradoDelEstudiante(59));
     }
    
-    public function test_ComprobarSegundaDivisionBien() {
+    public function test_ComprobarSegundaDivisionBienMayor() {
         $Estudiante = new Estudiante();
 
         $this->assertEquals("Segunda Division", $Estudiante->calcularGradoDelEstudiante(46));
+    }
+    public function test_ComprobarSegundaDivisionBienIgual() {
+        $Estudiante = new Estudiante();
+
+        $this->assertEquals("Segunda Division", $Estudiante->calcularGradoDelEstudiante(45));
     }
    
     public function test_ComprobarSegundaDivisionMal() {
@@ -30,6 +40,11 @@ class EstudianteTest extends TestCase {
         $this->assertNotEquals("Segunda Division", $Estudiante->calcularGradoDelEstudiante(44));
     }
    
+    public function test_ComprobarTerceraDivisionBienMayor() {
+        $Estudiante = new Estudiante();
+
+        $this->assertEquals("Tercera Division", $Estudiante->calcularGradoDelEstudiante(34));
+    }
     public function test_ComprobarTerceraDivisionBien() {
         $Estudiante = new Estudiante();
 
@@ -51,7 +66,7 @@ class EstudianteTest extends TestCase {
     public function test_ComprobarEstudianteReprobadoMal() {
         $Estudiante = new Estudiante();
 
-        $this->assertNotEquals("Estudiante reprobado", $Estudiante->calcularGradoDelEstudiante(35));
+        $this->assertNotEquals("Estudiante reprobado", $Estudiante->calcularGradoDelEstudiante(33));
     }
 }
 ?>
